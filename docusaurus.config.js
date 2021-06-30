@@ -22,7 +22,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'AccessToken',
+          docId: 'OAuth2.0',
           position: 'left',
           label: 'OAuth',
         },

@@ -4,13 +4,18 @@ import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
-import HomepageFeatures from "../components/HomepageFeatures";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
+        <img
+          src={"../../static/img/main.svg"}
+          alt={"mainImg"}
+          width={"500"}
+          className={("mainLogoImg", styles.mainLogoImg)}
+        />
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
@@ -19,6 +24,12 @@ function HomepageHeader() {
             to="/docs/UseDAuth"
           >
             Get Started
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/UseDAuth"
+          >
+            DAuth 사용해보기
           </Link>
         </div>
       </div>
@@ -30,13 +41,10 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`${siteConfig.title}`}
+      description="대구 소프트웨어 고등학교 DAuth 공식 문서"
     >
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
     </Layout>
   );
 }
