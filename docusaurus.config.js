@@ -11,7 +11,7 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Clzzi',
-  projectName: 'Clzzi',
+  projectName: 'DAuth_Docs',
   themeConfig: {
     navbar: {
       title: 'DAuth',
@@ -27,9 +27,10 @@ module.exports = {
           label: 'OAuth',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://github.com/Clzzi',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
