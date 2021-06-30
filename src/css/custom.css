@@ -35,3 +35,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   display:flex;
   background: url('/static/img/github.svg') no-repeat;
 }
+
+html[data-theme='dark'] .header-github-link::before {
+  background: url('/static/img/github-white.svg') no-repeat;
+}

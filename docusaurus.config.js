@@ -22,9 +22,21 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'OAuth/OAuth2.0',
           position: 'left',
           label: 'OAuth',
+        },
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: '이용방법',
+        },
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: 'API Docs',
         },
         {
           href: 'https://github.com/Clzzi',
