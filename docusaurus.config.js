@@ -34,7 +34,7 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'UserAPI',
           position: 'left',
           label: 'API Docs',
         },
@@ -50,11 +50,11 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Service',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'DAuth',
+              href: 'https://www.naver.com/',
             },
           ],
         },
@@ -62,16 +62,12 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'School HomePage',
+              href: 'http://www.dgsw.hs.kr/index.do',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'DodamDodam',
+              href: 'http://dodam.b1nd.com/',
             },
           ],
         },
@@ -79,17 +75,17 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Team B1ND',
+              href: 'https://b1nd.com/',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Clzzi',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Team B1ND, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: lightCodeTheme,

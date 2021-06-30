@@ -5,5 +5,8 @@ module.exports = {
   },
   DAuth: {
     'DAuth': ['UseDAuth'],
+  },
+  API: {
+    'User': ['UserAPI']
   }
 };
