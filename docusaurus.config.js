@@ -22,13 +22,13 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'OAuth/OAuth2.0',
+          docId: 'AccessToken',
           position: 'left',
           label: 'OAuth',
         },
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'UseDAuth',
           position: 'left',
           label: '이용방법',
         },
