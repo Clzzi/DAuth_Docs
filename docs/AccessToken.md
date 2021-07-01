@@ -4,6 +4,7 @@ id: AccessToken
 title: AccessToken
 ---
 
+# <a>AccessToken</a>
 ### 1. AccessToken은 뭘까?
 - 서버에서 발급해주는 인증을 위한 임의의 문자열이다
 - 이 토큰을 사용하여 서비스를 요청하면 이 토큰을 검증하고, 맞다면 해당 고객의 정보를 넘겨준다
