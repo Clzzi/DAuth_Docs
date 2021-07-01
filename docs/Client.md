@@ -4,6 +4,8 @@ title: Client
 sidebar_position: 1
 ---
 
+# <a>Client</a>
+
 ### ```POST``` Client 이름 확인
 ```bash
 http://dauth.b1nd.com/api/client/name
@@ -21,22 +23,22 @@ http://dauth.b1nd.com/api/client/name
 **```Response```**
 > ```json title="200 : OK"
 > {
->   "status" : 200,
->   "message" : "사용 가능한 이름입니다"
+>   "status": 200,
+>   "message": "사용 가능한 이름입니다"
 > }
 > ```
 
 >```json title="400 : Bad Request"
 > {
->   "status" : 400,
->   "message" : "이미 등록되어 있는 클라이언트 입니다"
+>   "status": 400,
+>   "message": "이미 등록되어 있는 클라이언트 입니다"
 > }
 > ```
 
 >```json title="500 : Internal Server Error"
 > {
->   "status" : 500,
->   "message" : "DAuth 서버 오류"
+>   "status": 500,
+>   "message": "DAuth 서버 오류"
 > }
 > ```
 
@@ -58,13 +60,13 @@ http://dauth.b1nd.com/api/client/register
 > }
 > ```
 
-##
+#####
 **```Response```**
 > ```json title="200 : OK"
 > {
->   "status" : 201,
->   "message" : "회원가입 성공",
->   "data" : {
+>   "status": 201,
+>   "message": "회원가입 성공",
+>   "data": {
 >     "dodamId": "string",
 >     "clientName": "string",
 >     "clientUrl": "string",
@@ -77,15 +79,15 @@ http://dauth.b1nd.com/api/client/register
 
 >```json title="403 : Forbidden"
 > {
->   "status" : 403,
->   "message" : "이미 등록되어 있는 클라이언트 입니다"
+>   "status": 403,
+>   "message": "이미 등록되어 있는 클라이언트 입니다"
 > }
 > ```
 
 >```json title="500 : Internal Server Error"
 > {
->   "status" : 500,
->   "message" : "DAuth 서버 오류"
+>   "status": 500,
+>   "message": "DAuth 서버 오류"
 > }
 > ```
 
@@ -99,9 +101,9 @@ http://dauth.b1nd.com/api/client
 **```Response```**
 > ```json title="200 : OK"
 > {
->   "status" : 200,
->   "message" : "모든 클라이언트 조회 완료",
->   "data" : [
+>   "status": 200,
+>   "message": "모든 클라이언트 조회 완료",
+>   "data": [
 >     {
 >       "clientName": "string",
 >       "clientUrl": "string"  
@@ -112,10 +114,7 @@ http://dauth.b1nd.com/api/client
 
 >```json title="500 : Internal Server Error"
 > {
->   "status" : 500,
->   "message" : "DAuth 서버 오류"
+>   "status": 500,
+>   "message": "DAuth 서버 오류"
 > }
 > ```
-
-##
-
