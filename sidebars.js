@@ -6,6 +6,6 @@ module.exports = {
     'DAuth': ['UseDAuth'],
   },
   API: {
-    'API Docs': ['Client','Auth']
+    'User API Docs': ['User API']
   }
 };

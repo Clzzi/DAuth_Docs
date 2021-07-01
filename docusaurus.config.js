@@ -34,7 +34,7 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'Client',
+          docId: 'User API',
           position: 'left',
           label: 'API Docs',
         },
