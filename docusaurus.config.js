@@ -34,12 +34,12 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'User API',
+          docId: 'Token API',
           position: 'left',
           label: 'API Docs',
         },
         {
-          href: 'https://github.com/Clzzi',
+          href: 'https://github.com/Clzzi/DAuth_Docs',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
@@ -54,7 +54,7 @@ module.exports = {
           items: [
             {
               label: 'DAuth',
-              href: 'https://www.naver.com/',
+              href: 'http://dauth.b1nd.com',
             },
           ],
         },

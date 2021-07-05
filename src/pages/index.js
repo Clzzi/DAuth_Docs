@@ -21,13 +21,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/UseDAuth"
+            to="/docs/OAuth2.0"
           >
             Get Started
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/UseDAuth"
+            to="http://dauth.b1nd.com"
           >
             DAuth 사용해보기
           </Link>

@@ -1,7 +1,7 @@
 ---
 id: User API
 title: 유저
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 
