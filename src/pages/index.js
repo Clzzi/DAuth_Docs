@@ -11,7 +11,7 @@ function HomepageHeader() {
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <img
-          src={"../../static/img/main.svg"}
+          src={"/img/main.svg"}
           alt={"mainImg"}
           width={"500"}
           className={("mainLogoImg", styles.mainLogoImg)}
@@ -21,7 +21,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/OAuth2.0"
+            to="http://docs.dauth.b1nd.com/docs/OAuth2.0"
           >
             Get Started
           </Link>
