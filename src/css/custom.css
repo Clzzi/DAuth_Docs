@@ -43,3 +43,11 @@ html[data-theme='dark'] .header-github-link::before {
 .button--lg:first-child {
   margin-right: 15px;
 }
+
+.table-of-contents__link > a {
+  color: #525860;  
+}
+
+.pagination-nav__label {
+  color: #000000;
+}
