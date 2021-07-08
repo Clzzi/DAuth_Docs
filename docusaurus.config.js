@@ -38,12 +38,6 @@ module.exports = {
           position: "left",
           label: "API Docs",
         },
-        {
-          href: "https://github.com/Clzzi/DAuth_Docs",
-          position: "right",
-          className: "header-github-link",
-          "aria-label": "GitHub repository",
-        },
       ],
     },
     footer: {
