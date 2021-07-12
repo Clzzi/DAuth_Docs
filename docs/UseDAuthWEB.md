@@ -1,7 +1,7 @@
 ---
-id: UseDAuth
-title: DAuth서비스 이용방법
-sidebar_position: 6
+id: UseDAuthWEB
+title: DAuth서비스 이용방법 - 웹
+sidebar_position: 1
 ---
 
 

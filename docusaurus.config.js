@@ -13,6 +13,9 @@ module.exports = {
   organizationName: "Clzzi",
   projectName: "DAuth_Docs",
   themeConfig: {
+    prism: {
+      additionalLanguages: ['kotlin','kt','kts'],
+    },
     navbar: {
       title: "DAuth",
       logo: {
@@ -28,7 +31,7 @@ module.exports = {
         },
         {
           type: "doc",
-          docId: "UseDAuth",
+          docId: "UseDAuthWEB",
           position: "left",
           label: "이용방법",
         },
