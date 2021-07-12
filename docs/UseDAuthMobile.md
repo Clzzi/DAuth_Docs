@@ -49,15 +49,20 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 이어서 다음 코드를 추가한다
 ```javascript
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
-
-    val register = settingForDodam(clientId, clientSecret, redirectUrl) 
-    // 발급받은 clienId, clientSecret, redirectUrl을 각각 대입
-
-    val compositeDisposable = CompositeDisposable()
-
+findViewById<Button>(R.id.btn).setOnClickListener {
+    loginForDodam(register).observe(this, {
+        compositeDisposable.add(
+            it.observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({
+                    // 성공 처리
+                    Toast.makeText(this, "token : ${it.token}", Toast.LENGTH_SHORT).show() 
+                }, {
+                    // 실패 처리
+                    Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show() 
+                }) 
+        )
+    })
 }
 ```
 성공 시 람다 형식은 **TokenResponse! → Unit**이며,   
