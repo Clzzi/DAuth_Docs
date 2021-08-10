@@ -40,7 +40,8 @@ http://open.dodam.b1nd.com/api/user
     "number": "번호 (int)",
     "name": "이름 (string)",
     "profileImage": "프로필 사진 (string(url))",
-    "accessLevel": "회원 분류 (1: 학생, 2: 선생님, 3: 관리자)"
+    "accessLevel": "회원 분류 (1: 학생, 2: 선생님, 3: 관리자)",
+    "email": "이메일 (string)"
   }
 }
 ```
