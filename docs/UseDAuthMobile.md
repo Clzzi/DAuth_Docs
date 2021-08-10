@@ -23,7 +23,7 @@ allprojects {
 그리고 다음의 dependencies를 추가한다
 ```javascript
 dependencies {
-	implementation 'com.github.mdev-dgsw:dauth_android_v1:1.1'
+	implementation 'com.github.mdev-dgsw:dauth_android_v1:1.2'
   
 	// ReactiveX
 	implementation "io.reactivex.rxjava2:rxjava:2.2.19"
@@ -68,6 +68,24 @@ findViewById<Button>(R.id.btn).setOnClickListener {
 성공 시 람다 형식은 **TokenResponse! → Unit**이며,   
 TokenResponse는 **token: String**과 **refreshToken: String**을 프로퍼티로 가진 데이터 클래스이다.
 
+### Token사용 방법
+```javascript
+fun getUser(token: String) {
+        compositeDisposable.add(
+            getUserInfo(token).observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({
+                    name = it.data.name
+                    accessLevel = it.data.accessLevel
+                    email = it.data.email
+                    grade = it.data.grade
+//                  ...
+                }, {
+                    it.printStackTrace()
+                })
+        )
+    }
+```
 
 ### 3. 실행결과
 # ![DAuth Service Mobile GIF](https://user-images.githubusercontent.com/62810965/125271507-cc9caa80-e345-11eb-929d-e49b966c61d2.gif)

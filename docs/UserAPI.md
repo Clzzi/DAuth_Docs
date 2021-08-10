@@ -10,7 +10,7 @@ sidebar_position: 2
 > 기본 엔드 포인트 ```http://open.dodam.b1nd.com/api```**
 
 ## 유저
-### POST : 유저 정보 가져오기
+### GET : 유저 정보 가져오기
 
 **요청 URL**
 ```bash
