@@ -18,11 +18,11 @@ http://open.dodam.b1nd.com/api/user
 ```
 
 **요청 Header**   
-> access-token : 로그인 후 발급받은 토큰
+> token : 로그인 후 발급받은 토큰
 
 ```json
   {
-    "access-token" : "string"
+    "Authorization" : "Bearer " + token
   }
 ```
 

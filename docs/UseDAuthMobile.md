@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # <a>DAuth서비스 이용방법</a>
 :::info
- 요구사항: RxJava2, 도담도담 안드로이드 최신 버전
+ 요구사항: 도담도담 안드로이드 최신 버전
 :::
 
 ### 1. 프로젝트 설정
@@ -24,44 +24,35 @@ allprojects {
 ```javascript
 dependencies {
 	implementation 'com.github.mdev-dgsw:dauth_android_v1:1.2'
-  
-	// ReactiveX
-	implementation "io.reactivex.rxjava2:rxjava:2.2.19"
-	implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
 }
 ```
 
 ### 2. 사용방식
-onCreate 메서드에서 **settingForDodam**과 **CompositeDisposable** 객체를 만든다.   
-이 때, settingForDodam은 **항상 onCreate() 혹은 onStart()에서 호출**하여야 한다.
-```javascript
+onCreate 메서드에서 **settingForDodam**을 호출하여 **ActivityResultLauncher**를 생성한다.    
+이 때, **settingForDodam**은 항상 **Activity**의 **onCreate()** 혹은 **onStart()** 내부에서 호출하여야 한다.
+```js
 override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
     val register = settingForDodam(clientId, clientSecret, redirectUrl) 
     // 발급받은 clienId, clientSecret, redirectUrl을 각각 대입
-
-    val compositeDisposable = CompositeDisposable()
-
 }
 ```
 
-이어서 다음 코드를 추가한다
+
+이어서 다음 코드를 추가한다.     
+**loginForDodam**의 파라미터들은 ```ActivityResultLauncher<Intent>, (TokenResponse) -> Unit, (Throwable) -> Unit```이다.    
+첫 번째 파라미터에는 위에서 생성한 **ActivityResultLauncher** 객체를 넣어주면 되며, 두 번째, 세 번째 파라미터에는 각각 성공, 실패 처리를 해주면 된다
+
 ```javascript
 findViewById<Button>(R.id.btn).setOnClickListener {
-    loginForDodam(register).observe(this, {
-        compositeDisposable.add(
-            it.observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .subscribe({
-                    // 성공 처리
-                    Toast.makeText(this, "token : ${it.token}", Toast.LENGTH_SHORT).show() 
-                }, {
-                    // 실패 처리
-                    Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show() 
-                }) 
-        )
+    loginForDodam(register, {
+        // 성공처리
+        Toast.makeText(this, it.token, Toast.LENGTH_SHORT).show()
+    }, {
+        // 실패처리
+        Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
     })
 }
 ```
