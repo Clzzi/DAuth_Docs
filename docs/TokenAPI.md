@@ -21,8 +21,8 @@ http://dauth.b1nd.com/api/token
 ```json
   {
     "code" : "string",
-    "clientId" : "string",
-    "clientSecret" : "string",
+    "client_id" : "string",
+    "client_secret" : "string",
   }
 ```
 
