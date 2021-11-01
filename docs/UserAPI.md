@@ -18,7 +18,7 @@ http://open.dodam.b1nd.com/api/user
 ```
 
 **요청 Header**   
-> token : 로그인 후 발급받은 토큰
+> Authorization : 로그인 후 발급받은 토큰
 
 ```json
   {

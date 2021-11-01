@@ -30,11 +30,9 @@ http://dauth.b1nd.com/api/token/refresh
 **응답 Body** 
 ```json
 {
-  "status": 200,
-  "message": "토큰 발급 완료",
-  "data": {
-    "token": "string",
-  }
+  "access_token": "string",
+  "token_type": "string",
+  "expries_in": "string",
 }
 ```
 

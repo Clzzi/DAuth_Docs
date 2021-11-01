@@ -31,12 +31,10 @@ http://dauth.b1nd.com/api/token
 **응답 Body** 
 ```json
 {
-  "status": 200,
-  "message": "토큰 생성 완료",
-  "data": {
-    "token": "string",
-    "refreshToken": "string",
-  }
+  "access_token": "string",
+  "refresh_token": "string",
+  "token_type": "string",
+  "expires_in": "string",
 }
 ```
 
